@@ -8,7 +8,7 @@ Install
 
 1. Place framework into you web server.
 2. Override database information at {doc_root}/sample/app/tinycms/config.php, make sure MySQL service installed and launched.
-3. All set. visit {yourdomain}/sample/
+3. Visit the site {yourdomain}/sample/
 
 Documentation
 =============
