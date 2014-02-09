@@ -1,0 +1,1 @@
+<h6>Click <a href="<?php echo getPermalink('tinycms/common/setup');?>">here</a> to install tables</h6>

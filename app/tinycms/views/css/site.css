@@ -1,0 +1,17 @@
+#header{
+	text-align:center;
+}
+.small-box{
+	width:600px;
+	margin:0px auto;
+}
+.buttons{
+	padding:10px 0px;
+}
+.clear{
+	width:100%;
+	clear:both;
+}
+.menu{
+	text-align:left;
+}

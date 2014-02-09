@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<seed>
+	<entry>
+		<field name="id">1</field>
+		<field name="name">SPORTS</field>
+		<field name="parent">0</field>
+	</entry>
+	<entry>
+		<field name="id">2</field>
+		<field name="name">CITY FAN</field>
+		<field name="parent">0</field>
+	</entry>
+	<entry>
+		<field name="id">3</field>
+		<field name="name">OTHER GRAPHICS</field>
+		<field name="parent">0</field>
+	</entry>
+	<entry>
+		<field name="id">4</field>
+		<field name="name">Men's Sports</field>
+		<field name="parent">1</field>
+	</entry>
+	<entry>
+		<field name="id">5</field>
+		<field name="name">Women's Sports</field>
+		<field name="parent">1</field>
+	</entry>
+	<entry>
+		<field name="id">6</field>
+		<field name="name">Baseball</field>
+		<field name="parent">4</field>
+	</entry>
+	<entry>
+		<field name="id">7</field>
+		<field name="name">Basketball</field>
+		<field name="parent">4</field>
+	</entry>
+	<entry>
+		<field name="id">8</field>
+		<field name="name">Football</field>
+		<field name="parent">4</field>
+	</entry>
+	<entry>
+		<field name="id">9</field>
+		<field name="name">Basketball</field>
+		<field name="parent">5</field>
+	</entry>
+	<entry>
+		<field name="id">10</field>
+		<field name="name">Hockey</field>
+		<field name="parent">5</field>
+	</entry>
+</seed>

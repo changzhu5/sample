@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<seed>
+	<entry>
+		<field name="id">1</field>
+		<field name="email">demo</field>
+		<field name="pwd">demo</field>
+	</entry>
+	<entry>
+		<field name="id">2</field>
+		<field name="email">admin</field>
+		<field name="pwd">admin</field>
+	</entry>
+</seed>
