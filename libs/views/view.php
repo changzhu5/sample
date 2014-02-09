@@ -1,8 +1,4 @@
 <?php
-/**
- * this object responsible for generating specific output,
- * which commonly formed by HTML,XML,JSON or PDF and other streaming,just allow one object.
- */
 require_once 'render.php';
 class View extends Object {
 	/**

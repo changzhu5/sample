@@ -1,12 +1,4 @@
 <?php
-/**
- * A controller is used to manage the logic for a part of your application.Controllers are used to
- * manage the logic for several models.Your application��s controllers are classes that extended
- * the Controller class which is a standard system library in /libs/.Controllers can include any
- * number of methods which are usually referred to as actions.Actions are controller methods
- * used to display views.An action is  single method of a controller.System��s dispatcher calls
- * actions when a coming request matches a URL to controller��s action.
- */
 require_once CORE_MODEL_PATH . 'app_model.php';
 require_once CORE_VIEW_PATH . 'view.php';
 
