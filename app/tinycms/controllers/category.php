@@ -15,7 +15,7 @@ class CategoryController extends MyAppController{
 	public function add(){
 		if($post = $this->request->getPost()){
 			if(!$post['title']){
-				$this->setMsg('please enter title.');
+				$this->setMsg('please enter title.','warning');
 			}
 			else{
 				$delegator = Context::fetch('delegator');
