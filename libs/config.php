@@ -6,19 +6,19 @@ Configure::write('base',Dispatcher::getInstance()->getWebRoot());
 /**
  * Define host address
  */
-Configure::write('hostname','mysql.ccui.me');
+Configure::write('hostname','hostname');
 /**
  * Define database name
  */
-Configure::write('dbname','ccui_test');
+Configure::write('dbname','dbname');
 /**
  * Define username
  */
-Configure::write('user','ccui');
+Configure::write('user','dbuser');
 /**
  * Define password
  */
-Configure::write('pwd','cui7519347');
+Configure::write('pwd','dbpassword');
 /*
  * Define charset that the result from database and header to client
  */
