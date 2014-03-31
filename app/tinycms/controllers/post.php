@@ -23,12 +23,12 @@ class PostController extends MyAppController{
 				$delegator = Context::fetch('delegator');
 				$post = $delegator->create('post',array('title','category_id','content'),array($post['title'],$post['category'],$post['content']));
 				$this->setMsg('Success!','success');
-				$this->redirect('tinycms/post/index');
+				$this->redirect('post/index');
 			}
 		}
 		$categories = $this->db->getCategories();
 		$this->assign('categories',$categories);
-		$this->assign('action',getPermalink('tinycms/post/add'));
+		$this->assign('action',getPermalink($this->request->getAppName() . '/post/add'));
 		return $this->render('post/form');
 	}
 	public function edit($id){
@@ -40,7 +40,7 @@ class PostController extends MyAppController{
 			$post->setValue('content',$p['content']);
 			$post->save();
 			$this->setMsg('Success!','success');
-			$this->redirect('tinycms/post/index');
+			$this->redirect('post/index');
 		}
 		
 		$category = $post->getRelatedOne('category');
@@ -48,7 +48,7 @@ class PostController extends MyAppController{
 		$this->assign('categories',$categories);
 		$this->assign('post',$post);
 		$this->assign('category',$category);
-		$this->assign('action',getPermalink('tinycms/post/edit/' . $id));
+		$this->assign('action',getPermalink($this->request->getAppName() . '/post/edit/' . $id));
 		return $this->render('post/form');
 	}
 	public function delete($id=null){
@@ -58,13 +58,13 @@ class PostController extends MyAppController{
 			if(!empty($posts)){
 				$delegator->remove('post',$posts);
 				$this->setMsg('Success!','success');
-				$this->redirect('tinycms/post/index');
+				$this->redirect('post/index');
 			}
 		}
 		$post = $delegator->findByPK('post',$id);
 		$post->remove();
 		$this->setMsg('Success!','success');
-		$this->redirect('tinycms/post/index');
+		$this->redirect('post/index');
 	}
 }
 ?>

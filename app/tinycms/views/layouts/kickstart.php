@@ -9,7 +9,7 @@
 <script type="text/javascript" src="<?php echo $appBase;?>views/js/kickstart.js"></script>
 </head>
 <body>
-<div class="container" id="header"><?php echo $this->requestAction($this->app,'common','head');?></div>
+<div class="container" id="header"><?php echo $this->requestAction('common','head');?></div>
 <div class="container" id="content"><?php echo $contents_for_layout;?></div>
-<div class="container" id="footer"><?php echo $this->requestAction($this->app,'common','foot');?></div>
+<div class="container" id="footer"><?php echo $this->requestAction('common','foot');?></div>
 </body></html>

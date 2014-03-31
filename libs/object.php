@@ -17,8 +17,12 @@ abstract class Object{
 	 * @return boolean true or false or mix data
 	 * @access public
 	 */
-	public function requestAction($app,$controller,$action,$params=null){
+	public function requestAction($controller,$action,$app=null,$params=null){
 		$dispatcher = Context::fetch('dispatcher');
+		$request = Context::fetch('request');
+		if(!$app){
+			$app = $request->getAppName();
+		}
 		$option = array(
 			'app'=>$app,
 			'controller'=>$controller,

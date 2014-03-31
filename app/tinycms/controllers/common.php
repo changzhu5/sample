@@ -52,7 +52,7 @@ class CommonController extends MyAppController{
 				else{
 					$_SESSION['user_id'] = $user->getId();
 					$this->setMsg('Success!','success');
-					$this->redirect('tinycms/common/index');
+					$this->redirect('common/index');
 				}
 			}
 		}
@@ -60,7 +60,7 @@ class CommonController extends MyAppController{
 	
 	public function logout(){
 		unset($_SESSION['user_id']);
-		$this->redirect('tinycms/common/login');
+		$this->redirect('common/login');
 	}
 	
 	public function register(){
@@ -75,7 +75,7 @@ class CommonController extends MyAppController{
 				$delegator = Context::fetch('delegator');
 				$record = $delegator->create('user',array('username','pwd'),array($post['username'],$post['pass']));
 				$this->setMsg('Success!','success');
-				$this->redirect('tinycms/common/login');
+				$this->redirect('common/login');
 			}
 		}
 	}
@@ -88,7 +88,7 @@ class CommonController extends MyAppController{
 		$this->ifRender = 0;
 		if($this->db->setup()){
 			$this->cache->setVar('installed',true);
-			$this->redirect('tinycms/common/login');
+			$this->redirect('common/login');
 		}
 	}
 }

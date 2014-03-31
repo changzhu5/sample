@@ -197,7 +197,9 @@ class Controller extends Object{
 				}
 			}
 		}
-		$this->model = new AppModel($this->request);
+		else{
+			$this->model = new AppModel($this->request);
+		}
 	}
 	/**
 	 * Render Widget
@@ -286,16 +288,18 @@ class Controller extends Object{
 	/**
 	 * From one controller redirect to other controller
 	 * @param string $url eg.controller/action/param1/param2/...
+	 * @param string $appName app name
 	 * @return void
 	 * @access public
 	 */
-	public function redirect($url,$flag=true){	
+	public function redirect($url,$appName=null){	
 		$this->ifRender = 0;
-		$url = getPermalink($url);
-		header('Location:' . $url);
-		if($flag){
-			exit();
+		if(!$appName){
+			$appName = $this->request->getAppName();
 		}
+		$url = getPermalink($appName . '/' . $url);
+		header('Location:' . $url);
+		exit();
 	}
 	/**
 	 * Initialize controller's model and components
